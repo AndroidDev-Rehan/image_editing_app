@@ -13,7 +13,7 @@ void main() async{
 
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
-  Stripe.publishableKey = "pk_test_51LGT2LSDqMDQQeTEYJcMlYGz8HuWcl5uanNs4CkJkz4xZpfRz1ZKG35CJJrgEIwwyqTfsSFaEjjCmIa6ScGSHZay00h9waBMcJ";
+  Stripe.publishableKey = "pk_test_51I9cjpBmB1AZ3VVDYcEdZqJnrumRZUU6si0TqOyfdOSrncEX7RadLvqqFBZCDHB82d8rnG23OjijzjOT1pUF6IEE00h4ajWKGc";
   prefs = await SharedPreferences.getInstance();
 
   String formattedDate = DateFormat('yyyy-MM-dd').format(DateTime.now());

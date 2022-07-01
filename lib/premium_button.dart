@@ -32,9 +32,9 @@ class _PremiumButtonState extends State<PremiumButton> {
         child:  Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: const [
             SizedBox(height: 5,),
-            const Text(
+            Text(
               "👑 Go Premium",
               style: TextStyle(fontSize: 22, color: Colors.white),
             ),

@@ -13,7 +13,7 @@ class Payment {
     final url = Uri.parse(
         "https://us-central1-befriend-me-e07b6.cloudfunctions.net/firstApi/stripePayement");
     final response =
-    await http.post(url, body: {'amount': amount,'stripe_secret':'sk_test_51LGT2LSDqMDQQeTEnj4QRyJkc8wnSkgpSz45d818RYrq7IT8xt6lYm5EUaJCKEKGQHlC4vP7VZNvRN58CGmOB9Gf00u2ihydn1'});
+    await http.post(url, body: {'amount': amount,'stripe_secret':'sk_test_51I9cjpBmB1AZ3VVDtL37cbzzWkf8XqK71dSaBt9ZbO379Ot2FWUmFrx1tn4J43I3W1objrs0aE6vzYDRTlN5gMCy00fTgKMyYY'});
     paymentIntentData = json.decode(response.body);
     await Stripe.instance.initPaymentSheet(
         paymentSheetParameters: SetupPaymentSheetParameters(

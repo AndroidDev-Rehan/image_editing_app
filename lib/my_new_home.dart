@@ -2,6 +2,7 @@ import 'dart:typed_data';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/material.dart';
+import 'package:image_editing_app/payment_controller.dart';
 import 'package:image_editing_app/premium_button.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:image_picker/image_picker.dart';
@@ -252,9 +253,12 @@ class _MyNewHomeScreenState extends State<MyNewHomeScreen> {
 
   _purchase() async {
     try{
+
       await Payment().makePayment("9.99");
       await prefs.setBool("premium", true);
       premium = true;
+
+      // await PaymentController.makePayment(amount: "10", currency: "USD");
 
       Navigator.pop(context);
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
